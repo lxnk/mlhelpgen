@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stylesheet_registry xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+   <stylesheet id="mfunction_style" transformtype="html"><!--17.03.2021 22:57:54-->
+      <name>Matlab Help Style</name>
+      <description>Matlab Help Style</description>
+      <filename>$matlabroot/sys/namespace/docbook/v4/xsl/html/docbook_rptgen.xsl</filename>
+      <xsl_code>
+         <xsl:param name="generate.toc">
+        book      nop
+        chapter   nop
+        section   nop
+      </xsl:param>
+         <xsl:param name="html.stylesheet">publish.css</xsl:param>
+         <xsl:param name="css.decoration" select="1"/>
+         <xsl:param name="chapter.autolabel" select="'0'"/>
+         <xsl:param name="html.stylesheet.type">text/css</xsl:param>
+         <xsl:variable name="show.comments" select="0"/>
+         <xsl:variable name="callout.graphics" select="0"/>
+      </xsl_code>
+   </stylesheet>
+</stylesheet_registry>
