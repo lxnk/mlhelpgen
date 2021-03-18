@@ -5,8 +5,11 @@
    <icon>HelpIcon.DEMOS</icon>
    <website/>
    <description>Report pattern and style sheet for automatic help generation</description>
-   <demosection>
-      <label>examples</label>
+   <website><a href="https://github.com/lxnk/mlhelpgen">
+        Robotic library at GitHub
+    </a></website>
+    <demosection>
+      <label>Two examples</label>
       <demoitem>
          <label>functions_list</label>
          <type>M-file</type>
