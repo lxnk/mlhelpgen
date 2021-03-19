@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<meta xmlns="http://www.w3.org/1999/xhtml" charset="utf-8"></meta>
+<meta xmlns="http://www.w3.org/1999/xhtml" name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+<meta xmlns="http://www.w3.org/1999/xhtml" http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+<title>integral</title>
+<script xmlns="http://www.w3.org/1999/xhtml" type="application/ld+json">
+      {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement":
+      [{
+          "@type": "ListItem",
+          "position": 1,
+
+          "item": {
+          "@id": "../index.html",
+          "name": "MATLAB"
+}
+
+          } 
+        ,
+        {
+          "@type": "ListItem",
+          "position": 2,
+
+          "item": {
+          "@id": "../mathematics.html",
+          "name": "Mathematics"
+}
+
+          }
+        ,
+        {
+          "@type": "ListItem",
+          "position": 3,
+
+          "item": {
+          "@id": "../numerical-integration-and-differential-equations.html",
+          "name": "Numerical Integration and Differential Equations"
+}
+
+          }
+        ,
+        {
+          "@type": "ListItem",
+          "position": 4,
+
+          "item": {
+          "@id": "../numerical-integration-and-differentiation.html",
+          "name": "Numerical Integration and Differentiation"
+}
+
+          }]
+      }</script><script xmlns="http://www.w3.org/1999/xhtml" type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "ItemList",
+          "name": "VisibleBreadcrumbs",
+
+        "itemListElement":
+        [
+        "numerical-integration-and-differentiation"
+        ],
+        "itemListOrder": "http://schema.org/ItemListOrderAscending"
+        }
+        </script>
+<meta xmlns="http://www.w3.org/1999/xhtml" name="chunktype" content="refpage"></meta><meta xmlns="http://www.w3.org/1999/xhtml" name="refentity" itemprop="refentity" content="function:integral"></meta><link xmlns="http://www.w3.org/1999/xhtml" href="../../includes/product/css/bootstrap.min.css" rel="stylesheet" type="text/css"></link>
+
+
+  <meta xmlns="http://www.w3.org/1999/xhtml" http-equiv="Content-Script-Type" content="text/javascript"></meta>
+<meta xmlns="http://www.w3.org/1999/xhtml" name="toctype" itemprop="pagetype" content="fcn"></meta>
+<meta xmlns="http://www.w3.org/1999/xhtml" name="infotype" itemprop="infotype" content="ref/function"></meta>
+
+<meta xmlns="http://www.w3.org/1999/xhtml" name="description" itemprop="description" content="This MATLAB function numerically integrates function fun from xmin to xmax using global adaptive quadrature and default error tolerances."></meta><script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../includes/product/scripts/jquery/jquery-latest.js"></script>
+<link xmlns="http://www.w3.org/1999/xhtml" href="../../includes/product/css/site6.css" rel="stylesheet" type="text/css"></link>
+<link xmlns="http://www.w3.org/1999/xhtml" href="../../includes/product/css/site6_lg.css" rel="stylesheet" media="screen and (min-width: 1200px)"></link>
+<link xmlns="http://www.w3.org/1999/xhtml" href="../../includes/product/css/site6_md.css" rel="stylesheet" media="screen and (min-width: 992px) and (max-width: 1199px)"></link>
+<link xmlns="http://www.w3.org/1999/xhtml" href="../../includes/product/css/site6_sm+xs.css" rel="stylesheet" media="screen and (max-width: 991px)"></link>
+<link xmlns="http://www.w3.org/1999/xhtml" href="../../includes/product/css/site6_sm.css" rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 991px)"></link>
+<link xmlns="http://www.w3.org/1999/xhtml" href="../../includes/product/css/site6_xs.css" rel="stylesheet" media="screen and (max-width: 767px)"></link>
+<link xmlns="http://www.w3.org/1999/xhtml" href="../../includes/product/css/site6_offcanvas_v2.css" rel="stylesheet" type="text/css"></link>
+
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/shared/scripts/l10n.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/shared/scripts/docscripts.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/shared/scripts/f1help.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/product/scripts/docscripts.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/shared/scripts/mw.imageanimation.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/shared/scripts/jquery.highlight.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/product/scripts/underscore-min.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/product/scripts/examples.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/product/scripts/use_platform_screenshots.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/product/scripts/suggest.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/shared/scripts/overload.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/shared/scripts/helpservices.js"></script>
+
+
+
+
+
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/product/scripts/jquery/jquery.mobile.custom.min.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/product/scripts/bootstrap.min.js" type="text/javascript"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="../../includes/product/scripts/global.js"></script>
+<link xmlns="http://www.w3.org/1999/xhtml" href="../../includes/product/css/doc_center_base.css" rel="stylesheet" type="text/css"></link>
+<link xmlns="http://www.w3.org/1999/xhtml" href="../../includes/product/css/doc_center_installed.css" rel="stylesheet" type="text/css"></link>
+<link xmlns="http://www.w3.org/1999/xhtml" href="../../includes/product/css/doc_center_print.css" rel="stylesheet" type="text/css" media="print"></link>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="../../includes/shared/equationrenderer/release/MathRenderer.js"></script>
+</head>
+<body id="responsive_offcanvas">
+<div xmlns="http://www.w3.org/1999/xhtml" id="doc_header_spacer" class="header"></div>
+<div xmlns="http://www.w3.org/1999/xhtml" class="section_header level_3"><div class="container-fluid"><div class="row" id="mobile_search_row"><div class="col-sm-6 col-md-7 has_horizontal_local_nav" id="section_header_title"><div class="section_header_content"><div class="section_header_title"><h1><a href="../../documentation-center.html">Documentation</a></h1></div></div></div><div class="col-xs-12 col-sm-6 col-md-5" id="mobile_search"><div class="search_nested_content_container"><form id="docsearch_form" name="docsearch_form" method="get" data-release="R2020a" data-language="en" action="../../templates/searchresults.html"><div class="input-group tokenized_search_field"><label class="sr-only">Search Help</label><input type="text" class="form-control conjoined_search" autocomplete="off" name="qdoc" placeholder="Search Help" id="docsearch"> </input><div class="input-group-btn"><button type="submit" name="submitsearch" id="submitsearch" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1"></button></div></div></form></div><button class="btn icon-remove btn_search pull-right icon_32 visible-xs" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button></div><div class="visible-xs" id="search_actuator"><button class="btn icon-search btn_search pull-right icon_16" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button></div></div></div></div><div class="row-offcanvas row-offcanvas-left">
+<div xmlns="http://www.w3.org/1999/xhtml" class="sidebar-offcanvas" id="sidebar">
+<nav class="offcanvas_nav" role="navigation">
+<div class="offcanvas_actuator" data-toggle="offcanvas" data-target="#sidebar" id="nav_toggle"><button type="button" class="btn"><span class="sr-only">Off-Canvas Navigation Menu Toggle
+                  Off-Canvas Navigation Menu Toggle</span><span class="icon-menu"></span></button><span class="offcanvas_actuator_label" id="translation_icon-menu" tabindex="-1" aria-hidden="true"></span></div><div class="nav_list_wrapper" id="nav_list_wrapper"><nav class="offcanvas_nav" role="navigation"><ul class="nav_breadcrumb" id="ul_left_nav_ancestors"><li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="../../documentation-center.html?s_tid=CRUX_lftnav" itemprop="url"><span itemprop="title">Documentation Home</span></a></li></ul>
+<ul class="nav_disambiguation"><li><a href="../index.html?s_tid=CRUX_lftnav">MATLAB</a>
+</li>
+<li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="../mathematics.html?s_tid=CRUX_lftnav" itemprop="url"><span itemprop="title">Mathematics</span></a></li><li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="../numerical-integration-and-differential-equations.html?s_tid=CRUX_lftnav" itemprop="url"><span itemprop="title">Numerical Integration and Differential Equations</span></a></li><li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="../numerical-integration-and-differentiation.html?s_tid=CRUX_lftnav" itemprop="url"><span itemprop="title">Numerical Integration and Differentiation</span></a></li></ul><ul class="nav_scrollspy nav">
+<li class="nav_scrollspy_function notranslate"><a href="#responsive_offcanvas"><span class="refname">integral</span></a></li>
+<li class="nav_scrollspy_title" id="SSPY810-refentry">On this page</li>
+<!--ADD_REFENTRY_TITLE_HERE 11--><li><a href="#d120e634217" class="intrnllnk">Syntax</a></li><li><a href="#description" class="intrnllnk">Description</a></li><li><a href="#btbbkta-5" class="intrnllnk">Examples</a><ul class="nav"><li><a href="#btdd9x5" class="intrnllnk">Improper Integral</a></li></ul><ul class="nav"><li><a href="#btdd9yd" class="intrnllnk">Parameterized Function</a></li></ul><ul class="nav"><li><a href="#btdf21r-1" class="intrnllnk">Singularity at Lower Limit</a></li></ul><ul class="nav"><li><a href="#btdd9y9" class="intrnllnk">Complex Contour Integration Using Waypoints</a></li></ul><ul class="nav"><li><a href="#btw3ipp-6" class="intrnllnk">Vector-Valued Function</a></li></ul><ul class="nav"><li><a href="#btdd9zh" class="intrnllnk">Improper Integral of Oscillatory Function</a></li></ul></li><li><a href="#btbbkta-3" class="intrnllnk">Input Arguments</a><ul class="nav"><li><a href="#btbbkta-1-fun" class="intrnllnk">fun</a></li><li><a href="#btbbkta-1-xmin" class="intrnllnk">xmin</a></li><li><a href="#btbbkta-1-xmax" class="intrnllnk">xmax</a></li></ul><ul class="nav"><li><a href="#namevaluepairs" class="intrnllnk">Name-Value Pair Arguments</a><ul class="nav"><li><a href="#btbbkta-1-AbsTol" class="intrnllnk">AbsTol</a></li><li><a href="#btbbkta-1-RelTol" class="intrnllnk">RelTol</a></li><li><a href="#btbbkta-1-ArrayValued" class="intrnllnk">ArrayValued</a></li><li><a href="#btbbkta-1-Waypoints" class="intrnllnk">Waypoints</a></li></ul></li></ul></li><li><a href="#btc_m8o-4" class="intrnllnk">Tips</a></li><li><a href="#References" class="intrnllnk">References</a></li><li><a href="#btbbkta-1_seealso" class="intrnllnk">See Also</a></li></ul>
+</nav></div></nav>
+<script src="../../includes/product/scripts/offcanvas_v2.js"></script></div><!--END.CLASS sidebar-offcanvas-->
+<div class="offcanvas_content_container">
+<div xmlns="http://www.w3.org/1999/xhtml" class="sticky_header_container"><div class="horizontal_nav"><div class="horizontal_nav_container"><div class="offcanvas_horizontal_nav"><div class="container-fluid"><div class="row"><div class="col-sm-12 hidden-xs"><nav class="navbar navbar-default" role="navigation" id="subnav"><div><ul class="nav navbar-nav crux_browse"><li id="crux_nav_documentation" class="crux_resource active"><a>All</a></li><li id="crux_nav_example" class="crux_resource"><a href="../examples.html?category=numerical-integration-and-differentiation">Examples</a></li><li id="crux_nav_function" class="crux_resource"><a href="../referencelist.html?type=function&amp;category=numerical-integration-and-differentiation">Functions</a></li><li role="presentation" class="dropdown" id="topnav_more" style="display:none;"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> More <span class="caret"></span></a><ul class="dropdown-menu"></ul></li></ul></div></nav></div><div class="visible-xs"><div class="container-fluid"><div class="row"><div class="col-xs-9"><div class="mobile_crux_nav_trigger"><div class="btn-group"><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources<span class="icon-arrow-down icon_16"></span></button><ul class="dropdown-menu"><li id="crux_nav_mobile_documentation" class="crux_resource active"><a>All</a></li><li id="crux_nav_mobile_example" class="crux_resource"><a href="../examples.html?category=numerical-integration-and-differentiation">Examples</a></li><li id="crux_nav_mobile_function" class="crux_resource"><a href="../referencelist.html?type=function&amp;category=numerical-integration-and-differentiation">Functions</a></li></ul></div></div></div><div class="col-xs-3"><div class="translate_placeholder"></div></div></div></div></div></div></div></div></div></div></div><div class="content_container" id="content_container" itemprop="content">
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12">
+
+<section xmlns="http://www.w3.org/1999/xhtml" id="doc_center_content" lang="en"><div id="pgtype-ref-function"><div class="function_ref"><span id="btbbkta-1" class="anchor_target"></span><h1 class="r2020a notranslate" itemprop="title"><span class="refname">integral</span></h1><div class="doc_topic_desc"><div class="purpose_container"><p itemprop="purpose">Numerical integration</p><div class="switch"><a href="javascript:void(0);" id="expandAllPage" data-allexpanded="true1">collapse all in page</a></div></div></div>
+<div class="ref_sect"><h2 id="d120e634217">Syntax</h2><div class="syntax_signature"><div class="syntax_signature_module"><div class="code_responsive"><code class="synopsis"><a href="#d120e634224" class="intrnllnk">q = integral(fun,xmin,xmax)</a></code></div><div class="code_responsive"><code class="synopsis"><a href="#d120e634247" class="intrnllnk">q = integral(fun,xmin,xmax,Name,Value)</a></code></div></div></div></div><div class="clear"></div><span id="btbbkta-2" class="anchor_target"></span><h2 id="description">Description</h2><div class="descriptions"><div class="description_module"><div class="description_element"><p class="syntax_example"><a href="integral.html#btdd9x5" class="intrnllnk">example</a></p><div class="code_responsive"><p><span id="d120e634224" itemprop="syntax"><code class="synopsis">q = integral(<a href="#btbbkta-1-fun" class="intrnllnk"><code class="argument">fun</code></a>,<a href="#btbbkta-1-xmin" class="intrnllnk"><code class="argument">xmin</code></a>,<a href="#btbbkta-1-xmax" class="intrnllnk"><code class="argument">xmax</code></a>)</code></span> numerically
+integrates function <code class="literal">fun</code> from <code class="literal">xmin</code> to <code class="literal">xmax</code> using
+global adaptive quadrature and default error tolerances.</p></div></div><div class="description_element"><p class="syntax_example"><a href="integral.html#btdd9y9" class="intrnllnk">example</a></p><div class="code_responsive"><p><span id="d120e634247" itemprop="syntax"><code class="synopsis">q = integral(<a href="#btbbkta-1-fun" class="intrnllnk"><code class="argument">fun</code></a>,<a href="#btbbkta-1-xmin" class="intrnllnk"><code class="argument">xmin</code></a>,<a href="#btbbkta-1-xmax" class="intrnllnk"><code class="argument">xmax</code></a>,<a href="#namevaluepairarguments" class="intrnllnk"><code class="argument">Name,Value</code></a>)</code></span> specifies
+additional options with one or more <code class="literal">Name,Value</code> pair
+arguments. For example, specify <code class="literal">'WayPoints'</code> followed
+by a vector of real or complex numbers to indicate specific points
+for the integrator to use.</p></div></div></div></div><div class="clear"></div><div class="examples"><h2 id="btbbkta-5">Examples</h2><div class="expandableContent" id="expandableExamples"><p class="switch"><a href="javascript:void(0);" class="expandAllLink" data-allexpanded="true3">collapse all</a></p><div class="panel-group" role="tablist" aria-multiselectable="true" id="expand_panel_heading_btdd9x5"><div class="panel panel-default "><div role="tab" data-toggle="collapse" id="expand_panel_heading_btdd9x5" data-target="#expand_panel_body_btdd9x5" aria-controls="expand_panel_body_btdd9x5" class="panel-heading add_cursor_pointer" aria-expanded="true"><h3 class="panel-title" id="btdd9x5">Improper Integral<br/> </h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_btdd9x5" aria-labelledby="expand_panel_heading_btdd9x5" class="panel-collapse collapse in"><div class="panel-body"><div class="pull-right examples_short_list" style="width:250px; margin-left: 10px; margin-bottom: 10px;"><div data-pane="metadata" style="margin-bottom: 0px;" class="panel metadata_container"><div class="panel-body metadata_content" style="padding-top:0px; padding-bottom:0px;"><div class="row"><div class="col-xs-12"><a class="btn btn_secondary btn-block" href="matlab:openExample('matlab/ImproperIntegralExample')">Open Live Script</a></div></div></div></div></div><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "DigitalDocument",
+          "headline": "Improper Integral",
+          "description": "Create the function f(x)=e-x2(lnx)2.",
+          "thumbnailURL": "../../includes/product/images/doc_center/DefaultImage.png",
+          "genre": "Live Script",
+          "isBasedOn": {
+          "@type": "Product",
+          "name": "MATLAB"
+
+        },
+          "isPartOf": {
+          "@type": "CreativeWork",
+          "url": "integral.html"
+
+        },
+          "identifier": "matlab.ImproperIntegralExample",
+          "name": "ImproperIntegralExample",
+          "url": "integral.html#btdd9x5"
+
+        }</script><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "PropertyValue",
+          "name": "open_command",
+          "value": "matlab:openExample('matlab/ImproperIntegralExample')"
+
+        }</script><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "ItemList",
+          "name": "ExampleSourceFiles",
+
+        "itemListElement":
+        [
+        "ImproperIntegralExample.mlx"
+        ],
+        "itemListOrder": "http://schema.org/ItemListOrderAscending"
+        }
+        </script><p class="shortdesc">Create the function <span class="inlineequation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mrow><mi>e</mi></mrow><mrow><mo>-</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></msup><mo stretchy="false">(</mo><mi mathvariant="normal">ln</mi><mi>x</mi><msup><mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow></math></span>. </p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>fun = @(x) exp(-x.^2).*log(x).^2;</pre></div></div></div><p>Evaluate the integral from <code class="literal">x=0</code> to <code class="literal">x=Inf</code>. </p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>q = integral(fun,0,Inf)</pre></div></div></div><div class="code_responsive"><div class="programlisting"><div class="codeoutput"><pre>q = 1.9475
+</pre></div></div></div><div class="procedure"></div></div></div></div></div><div itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/Example" itemprop="example" class="em_example"><meta itemprop="exampleid" content="matlab-ImproperIntegralExample"></meta><meta itemprop="exampletitle" content="Improper Integral"></meta></div><div class="panel-group" role="tablist" aria-multiselectable="true" id="expand_panel_heading_btdd9yd"><div class="panel panel-default "><div role="tab" data-toggle="collapse" id="expand_panel_heading_btdd9yd" data-target="#expand_panel_body_btdd9yd" aria-controls="expand_panel_body_btdd9yd" class="panel-heading add_cursor_pointer" aria-expanded="true"><h3 class="panel-title" id="btdd9yd">Parameterized Function<br/> </h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_btdd9yd" aria-labelledby="expand_panel_heading_btdd9yd" class="panel-collapse collapse in"><div class="panel-body"><div class="pull-right examples_short_list" style="width:250px; margin-left: 10px; margin-bottom: 10px;"><div data-pane="metadata" style="margin-bottom: 0px;" class="panel metadata_container"><div class="panel-body metadata_content" style="padding-top:0px; padding-bottom:0px;"><div class="row"><div class="col-xs-12"><a class="btn btn_secondary btn-block" href="matlab:openExample('matlab/ParameterizedFunctionExample')">Open Live Script</a></div></div></div></div></div><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "DigitalDocument",
+          "headline": "Parameterized Function",
+          "description": "Create the function f(x)=1/(x3-2x-c) with one parameter, c.",
+          "thumbnailURL": "../../includes/product/images/doc_center/DefaultImage.png",
+          "genre": "Live Script",
+          "isBasedOn": {
+          "@type": "Product",
+          "name": "MATLAB"
+
+        },
+          "isPartOf": {
+          "@type": "CreativeWork",
+          "url": "integral.html"
+
+        },
+          "identifier": "matlab.ParameterizedFunctionExample",
+          "name": "ParameterizedFunctionExample",
+          "url": "integral.html#btdd9yd"
+
+        }</script><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "PropertyValue",
+          "name": "open_command",
+          "value": "matlab:openExample('matlab/ParameterizedFunctionExample')"
+
+        }</script><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "ItemList",
+          "name": "ExampleSourceFiles",
+
+        "itemListElement":
+        [
+        "ParameterizedFunctionExample.mlx"
+        ],
+        "itemListOrder": "http://schema.org/ItemListOrderAscending"
+        }
+        </script><p class="shortdesc">Create the function <span class="inlineequation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo>/</mo><mo stretchy="false">(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>-</mo><mn>2</mn><mi>x</mi><mo>-</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></math></span> with one parameter, <span class="inlineequation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>c</mi></mrow></math></span>. </p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>fun = @(x,c) 1./(x.^3-2*x-c);</pre></div></div></div><p>Evaluate the integral from <code class="literal">x=0</code> to <code class="literal">x=2</code> at <code class="literal">c=5</code>. </p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>q = integral(@(x) fun(x,5),0,2)</pre></div></div></div><div class="code_responsive"><div class="programlisting"><div class="codeoutput"><pre>q = -0.4605
+</pre></div></div></div><p>See <a href="../math/parameterizing-functions.html" class="a">Parameterizing Functions</a> for more information on this technique.</p><div class="procedure"></div></div></div></div></div><div itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/Example" itemprop="example" class="em_example"><meta itemprop="exampleid" content="matlab-ParameterizedFunctionExample"></meta><meta itemprop="exampletitle" content="Parameterized Function"></meta></div><div class="panel-group" role="tablist" aria-multiselectable="true" id="expand_panel_heading_btdf21r-1"><div class="panel panel-default "><div role="tab" data-toggle="collapse" id="expand_panel_heading_btdf21r-1" data-target="#expand_panel_body_btdf21r-1" aria-controls="expand_panel_body_btdf21r-1" class="panel-heading add_cursor_pointer" aria-expanded="true"><h3 class="panel-title" id="btdf21r-1">Singularity at Lower Limit<br/> </h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_btdf21r-1" aria-labelledby="expand_panel_heading_btdf21r-1" class="panel-collapse collapse in"><div class="panel-body"><div class="pull-right examples_short_list" style="width:250px; margin-left: 10px; margin-bottom: 10px;"><div data-pane="metadata" style="margin-bottom: 0px;" class="panel metadata_container"><div class="panel-body metadata_content" style="padding-top:0px; padding-bottom:0px;"><div class="row"><div class="col-xs-12"><a class="btn btn_secondary btn-block" href="matlab:openExample('matlab/SingularityatLowerLimitExample')">Open Live Script</a></div></div></div></div></div><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "DigitalDocument",
+          "headline": "Singularity at Lower Limit",
+          "description": "Create the function f(x)=ln(x).",
+          "thumbnailURL": "../../includes/product/images/doc_center/DefaultImage.png",
+          "genre": "Live Script",
+          "isBasedOn": {
+          "@type": "Product",
+          "name": "MATLAB"
+
+        },
+          "isPartOf": {
+          "@type": "CreativeWork",
+          "url": "integral.html"
+
+        },
+          "identifier": "matlab.SingularityatLowerLimitExample",
+          "name": "SingularityatLowerLimitExample",
+          "url": "integral.html#btdf21r-1"
+
+        }</script><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "PropertyValue",
+          "name": "open_command",
+          "value": "matlab:openExample('matlab/SingularityatLowerLimitExample')"
+
+        }</script><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "ItemList",
+          "name": "ExampleSourceFiles",
+
+        "itemListElement":
+        [
+        "SingularityatLowerLimitExample.mlx"
+        ],
+        "itemListOrder": "http://schema.org/ItemListOrderAscending"
+        }
+        </script><p class="shortdesc">Create the function <span class="inlineequation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi mathvariant="normal">ln</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></math></span>. </p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>fun = @(x)log(x);</pre></div></div></div><p>Evaluate the integral from <code class="literal">x=0</code> to <code class="literal">x=1</code> with the default error tolerances.</p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>format <span style="color:#A020F0">long</span>
+q1 = integral(fun,0,1)</pre></div></div></div><div class="code_responsive"><div class="programlisting"><div class="codeoutput"><pre>q1 = 
+  -1.000000010959678
+
+</pre></div></div></div><p>Evaluate the integral again, this time with 12 decimal places of accuracy. Set <code class="literal">RelTol</code> to zero so that <code class="literal">integral</code> only attempts to satisfy the absolute error tolerance.</p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>q2 = integral(fun,0,1,<span style="color:#A020F0">'RelTol'</span>,0,<span style="color:#A020F0">'AbsTol'</span>,1e-12)</pre></div></div></div><div class="code_responsive"><div class="programlisting"><div class="codeoutput"><pre>q2 = 
+  -1.000000000000010
+
+</pre></div></div></div><div class="procedure"></div></div></div></div></div><div itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/Example" itemprop="example" class="em_example"><meta itemprop="exampleid" content="matlab-SingularityatLowerLimitExample"></meta><meta itemprop="exampletitle" content="Singularity at Lower Limit"></meta></div><div class="panel-group" role="tablist" aria-multiselectable="true" id="expand_panel_heading_btdd9y9"><div class="panel panel-default "><div role="tab" data-toggle="collapse" id="expand_panel_heading_btdd9y9" data-target="#expand_panel_body_btdd9y9" aria-controls="expand_panel_body_btdd9y9" class="panel-heading add_cursor_pointer" aria-expanded="true"><h3 class="panel-title" id="btdd9y9">Complex Contour Integration Using Waypoints<br/> </h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_btdd9y9" aria-labelledby="expand_panel_heading_btdd9y9" class="panel-collapse collapse in"><div class="panel-body"><div class="pull-right examples_short_list" style="width:250px; margin-left: 10px; margin-bottom: 10px;"><div data-pane="metadata" style="margin-bottom: 0px;" class="panel metadata_container"><div class="panel-body metadata_content" style="padding-top:0px; padding-bottom:0px;"><div class="row"><div class="col-xs-12"><a class="btn btn_secondary btn-block" href="matlab:openExample('matlab/ComplexContourIntegrationUsingWaypointsExample')">Open Live Script</a></div></div></div></div></div><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "DigitalDocument",
+          "headline": "Complex Contour Integration Using Waypoints",
+          "description": "Create the function f(z)=1/(2z-1).",
+          "thumbnailURL": "../../includes/product/images/doc_center/DefaultImage.png",
+          "genre": "Live Script",
+          "isBasedOn": {
+          "@type": "Product",
+          "name": "MATLAB"
+
+        },
+          "isPartOf": {
+          "@type": "CreativeWork",
+          "url": "integral.html"
+
+        },
+          "identifier": "matlab.ComplexContourIntegrationUsingWaypointsExample",
+          "name": "ComplexContourIntegrationUsingWaypointsExample",
+          "url": "integral.html#btdd9y9"
+
+        }</script><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "PropertyValue",
+          "name": "open_command",
+          "value": "matlab:openExample('matlab/ComplexContourIntegrationUsingWaypointsExample')"
+
+        }</script><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "ItemList",
+          "name": "ExampleSourceFiles",
+
+        "itemListElement":
+        [
+        "ComplexContourIntegrationUsingWaypointsExample.mlx"
+        ],
+        "itemListOrder": "http://schema.org/ItemListOrderAscending"
+        }
+        </script><p class="shortdesc">Create the function <span class="inlineequation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo>/</mo><mo stretchy="false">(</mo><mn>2</mn><mi>z</mi><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math></span>. </p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>fun = @(z) 1./(2*z-1);</pre></div></div></div><p>Integrate in the complex plane over the triangular path from <code class="literal">0</code> to <code class="literal">1+1i</code> to <code class="literal">1-1i</code> to <code class="literal">0</code> by specifying waypoints.</p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>q = integral(fun,0,0,<span style="color:#A020F0">'Waypoints'</span>,[1+1i,1-1i])</pre></div></div></div><div class="code_responsive"><div class="programlisting"><div class="codeoutput"><pre>q = 0.0000 - 3.1416i
+</pre></div></div></div><div class="procedure"></div></div></div></div></div><div itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/Example" itemprop="example" class="em_example"><meta itemprop="exampleid" content="matlab-ComplexContourIntegrationUsingWaypointsExample"></meta><meta itemprop="exampletitle" content="Complex Contour Integration Using Waypoints"></meta></div><div class="panel-group" role="tablist" aria-multiselectable="true" id="expand_panel_heading_btw3ipp-6"><div class="panel panel-default "><div role="tab" data-toggle="collapse" id="expand_panel_heading_btw3ipp-6" data-target="#expand_panel_body_btw3ipp-6" aria-controls="expand_panel_body_btw3ipp-6" class="panel-heading add_cursor_pointer" aria-expanded="true"><h3 class="panel-title" id="btw3ipp-6">Vector-Valued Function<br/> </h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_btw3ipp-6" aria-labelledby="expand_panel_heading_btw3ipp-6" class="panel-collapse collapse in"><div class="panel-body"><div class="pull-right examples_short_list" style="width:250px; margin-left: 10px; margin-bottom: 10px;"><div data-pane="metadata" style="margin-bottom: 0px;" class="panel metadata_container"><div class="panel-body metadata_content" style="padding-top:0px; padding-bottom:0px;"><div class="row"><div class="col-xs-12"><a class="btn btn_secondary btn-block" href="matlab:openExample('matlab/VectorValuedFunctionExample')">Open Live Script</a></div></div></div></div></div><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "DigitalDocument",
+          "headline": "Vector-Valued Function",
+          "description": "Create the vector-valued function f(x)=[sinx,sin2x,sin3x,sin4x,sin5x] and integrate from x=0 to x=1. Specify 'ArrayValued',true to evaluate the integral of an array-valued or vector-valued function.",
+          "thumbnailURL": "../../includes/product/images/doc_center/DefaultImage.png",
+          "genre": "Live Script",
+          "isBasedOn": {
+          "@type": "Product",
+          "name": "MATLAB"
+
+        },
+          "isPartOf": {
+          "@type": "CreativeWork",
+          "url": "integral.html"
+
+        },
+          "identifier": "matlab.VectorValuedFunctionExample",
+          "name": "VectorValuedFunctionExample",
+          "url": "integral.html#btw3ipp-6"
+
+        }</script><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "PropertyValue",
+          "name": "open_command",
+          "value": "matlab:openExample('matlab/VectorValuedFunctionExample')"
+
+        }</script><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "ItemList",
+          "name": "ExampleSourceFiles",
+
+        "itemListElement":
+        [
+        "VectorValuedFunctionExample.mlx"
+        ],
+        "itemListOrder": "http://schema.org/ItemListOrderAscending"
+        }
+        </script><p class="shortdesc">Create the vector-valued function <span class="inlineequation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">[</mo><mi mathvariant="normal">sin</mi><mi>x</mi><mo>,</mo><mspace width="0.2222222222222222em"></mspace><mi mathvariant="normal">sin</mi><mn>2</mn><mi>x</mi><mo>,</mo><mspace width="0.2222222222222222em"></mspace><mi mathvariant="normal">sin</mi><mn>3</mn><mi>x</mi><mo>,</mo><mspace width="0.2222222222222222em"></mspace><mi mathvariant="normal">sin</mi><mn>4</mn><mi>x</mi><mo>,</mo><mspace width="0.2222222222222222em"></mspace><mi mathvariant="normal">sin</mi><mn>5</mn><mi>x</mi><mo stretchy="false">]</mo></mrow></math></span> and integrate from <code class="literal">x=0</code> to <code class="literal">x=1</code>. Specify <code class="literal">'ArrayValued',true</code> to evaluate the integral of an array-valued or vector-valued function.</p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>fun = @(x)sin((1:5)*x);
+q = integral(fun,0,1,<span style="color:#A020F0">'ArrayValued'</span>,true)</pre></div></div></div><div class="code_responsive"><div class="programlisting"><div class="codeoutput"><pre>q = <span class="emphasis"><em>1×5</em></span>
+
+    0.4597    0.7081    0.6633    0.4134    0.1433
+
+</pre></div></div></div><div class="procedure"></div></div></div></div></div><div itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/Example" itemprop="example" class="em_example"><meta itemprop="exampleid" content="matlab-VectorValuedFunctionExample"></meta><meta itemprop="exampletitle" content="VectorValued Function"></meta></div><div class="panel-group" role="tablist" aria-multiselectable="true" id="expand_panel_heading_btdd9zh"><div class="panel panel-default "><div role="tab" data-toggle="collapse" id="expand_panel_heading_btdd9zh" data-target="#expand_panel_body_btdd9zh" aria-controls="expand_panel_body_btdd9zh" class="panel-heading add_cursor_pointer" aria-expanded="true"><h3 class="panel-title" id="btdd9zh">Improper Integral of Oscillatory Function<br/> </h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_btdd9zh" aria-labelledby="expand_panel_heading_btdd9zh" class="panel-collapse collapse in"><div class="panel-body"><div class="pull-right examples_short_list" style="width:250px; margin-left: 10px; margin-bottom: 10px;"><div data-pane="metadata" style="margin-bottom: 0px;" class="panel metadata_container"><div class="panel-body metadata_content" style="padding-top:0px; padding-bottom:0px;"><div class="row"><div class="col-xs-12"><a class="btn btn_secondary btn-block" href="matlab:openExample('matlab/ImproperIntegralofOscillatoryFunctionExample')">Open Live Script</a></div></div></div></div></div><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "DigitalDocument",
+          "headline": "Improper Integral of Oscillatory Function",
+          "description": "Create the function f(x)=x5e-xsinx.",
+          "thumbnailURL": "../../includes/product/images/doc_center/DefaultImage.png",
+          "genre": "Live Script",
+          "isBasedOn": {
+          "@type": "Product",
+          "name": "MATLAB"
+
+        },
+          "isPartOf": {
+          "@type": "CreativeWork",
+          "url": "integral.html"
+
+        },
+          "identifier": "matlab.ImproperIntegralofOscillatoryFunctionExample",
+          "name": "ImproperIntegralofOscillatoryFunctionExample",
+          "url": "integral.html#btdd9zh"
+
+        }</script><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "PropertyValue",
+          "name": "open_command",
+          "value": "matlab:openExample('matlab/ImproperIntegralofOscillatoryFunctionExample')"
+
+        }</script><script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "ItemList",
+          "name": "ExampleSourceFiles",
+
+        "itemListElement":
+        [
+        "ImproperIntegralofOscillatoryFunctionExample.mlx"
+        ],
+        "itemListOrder": "http://schema.org/ItemListOrderAscending"
+        }
+        </script><p class="shortdesc">Create the function <span class="inlineequation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>5</mn></mrow></msup><msup><mrow><mi>e</mi></mrow><mrow><mo>-</mo><mi>x</mi></mrow></msup><mi mathvariant="normal">sin</mi><mi>x</mi></mrow></math></span>. </p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>fun = @(x)x.^5.*exp(-x).*sin(x);</pre></div></div></div><p>Evaluate the integral from <code class="literal">x=0</code> to <code class="literal">x=Inf</code> , adjusting the absolute and relative tolerances. </p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>format <span style="color:#A020F0">long</span>
+q = integral(fun,0,Inf,<span style="color:#A020F0">'RelTol'</span>,1e-8,<span style="color:#A020F0">'AbsTol'</span>,1e-13)</pre></div></div></div><div class="code_responsive"><div class="programlisting"><div class="codeoutput"><pre>q = 
+ -14.999999999998364
+
+</pre></div></div></div><div class="procedure"></div></div></div></div></div><div itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/Example" itemprop="example" class="em_example"><meta itemprop="exampleid" content="matlab-ImproperIntegralofOscillatoryFunctionExample"></meta><meta itemprop="exampletitle" content="Improper Integral of Oscillatory Function"></meta></div></div></div><div class="ref_sect"><h2 id="btbbkta-3">Input Arguments</h2><div class="expandableContent"><p class="switch "><a href="javascript:void(0);" class="expandAllLink" data-allexpanded="true">collapse all</a></p><div class="panel-group" id="btbbkta-3_panel-group" role="tablist" aria-multiselectable="true"><div class="panel-group" role="tablist" aria-multiselectable="true"><div class="panel panel-default "><div itemscope="" itemprop="inputargument" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/NamedInputArgument" itemid="btbbkta-1-fun"><div role="tab" data-toggle="collapse" id="expand_panel_heading_btbbkta-1-fun" data-target="#expand_panel_body_btbbkta-1-fun" aria-controls="expand_panel_body_btbbkta-1-fun" class="panel-heading add_cursor_pointer" aria-expanded="true"><span id="inputarg_fun" class="anchor_target"></span><h3 class="panel-title" id="btbbkta-1-fun"><code itemprop="name">fun</code> &#8212; <span itemprop="purpose">Integrand</span><br/> <span class="add_font_color_general remove_bold"><span class="example_desc"><span itemprop="inputvalue">function handle</span></span></span></h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_btbbkta-1-fun" aria-labelledby="expand_panel_heading_btbbkta-1-fun" class="panel-collapse collapse in"><div class="panel-body">
+<p>Integrand, specified as a function handle, which defines the
+function to be integrated from <code class="literal">xmin</code> to <code class="literal">xmax</code>.</p>
+<p>For scalar-valued problems, the function <code class="literal">y = fun(x)</code> must accept a vector
+            argument, <code class="literal">x</code>, and return a vector result, <code class="literal">y</code>. This
+            generally means that <code class="literal">fun</code> must use array operators instead of matrix
+            operators. For example, use <code class="literal">.*</code> (<code class="function">times</code>) rather
+            than <code class="literal">*</code> (<code class="function">mtimes</code>). If you set the
+              <code class="literal">'ArrayValued'</code> option to <code class="literal">true</code>, then
+              <code class="literal">fun</code> must accept a scalar and return an array of fixed size.</p>
+</div></div></div></div></div><div class="panel-group" role="tablist" aria-multiselectable="true"><div class="panel panel-default "><div itemscope="" itemprop="inputargument" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/NamedInputArgument" itemid="btbbkta-1-xmin"><div role="tab" data-toggle="collapse" id="expand_panel_heading_btbbkta-1-xmin" data-target="#expand_panel_body_btbbkta-1-xmin" aria-controls="expand_panel_body_btbbkta-1-xmin" class="panel-heading add_cursor_pointer" aria-expanded="true"><span id="inputarg_xmin" class="anchor_target"></span><h3 class="panel-title" id="btbbkta-1-xmin"><code itemprop="name">xmin</code> &#8212; <span itemprop="purpose">Lower limit of <em class="varname">x</em></span><br/> <span class="add_font_color_general remove_bold"><span class="example_desc"><span itemprop="inputvalue">real number</span> | <span itemprop="inputvalue">complex number</span></span></span></h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_btbbkta-1-xmin" aria-labelledby="expand_panel_heading_btbbkta-1-xmin" class="panel-collapse collapse in"><div class="panel-body">
+<p>Lower limit of <em class="varname">x</em>, specified as a real (finite
+or infinite) scalar value or a complex (finite) scalar value. If either <code class="literal">xmin</code> or <code class="literal">xmax</code> are
+complex, then <code class="function">integral</code> approximates the path
+integral from <code class="literal">xmin</code> to <code class="literal">xmax</code> over
+a straight line path.</p>
+<p class="datatypelist"><strong>Data Types: </strong><code itemprop="datatype">double</code> | <code itemprop="datatype">single</code><br/>
+<strong>Complex Number Support: </strong>Yes</p></div></div></div></div></div><div class="panel-group" role="tablist" aria-multiselectable="true"><div class="panel panel-default "><div itemscope="" itemprop="inputargument" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/NamedInputArgument" itemid="btbbkta-1-xmax"><div role="tab" data-toggle="collapse" id="expand_panel_heading_btbbkta-1-xmax" data-target="#expand_panel_body_btbbkta-1-xmax" aria-controls="expand_panel_body_btbbkta-1-xmax" class="panel-heading add_cursor_pointer" aria-expanded="true"><span id="inputarg_xmax" class="anchor_target"></span><h3 class="panel-title" id="btbbkta-1-xmax"><code itemprop="name">xmax</code> &#8212; <span itemprop="purpose">Upper limit of <em class="varname">x</em></span><br/> <span class="add_font_color_general remove_bold"><span class="example_desc"><span itemprop="inputvalue">real number</span> | <span itemprop="inputvalue">complex number</span></span></span></h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_btbbkta-1-xmax" aria-labelledby="expand_panel_heading_btbbkta-1-xmax" class="panel-collapse collapse in"><div class="panel-body">
+<p>Upper limit of <em class="varname">x</em>, specified as a real number
+(finite or infinite) or a complex number (finite). If either <code class="literal">xmin</code> or <code class="literal">xmax</code> are
+complex, <code class="function">integral</code> approximates the path integral
+from <code class="literal">xmin</code> to <code class="literal">xmax</code> over a straight
+line path.</p>
+<p class="datatypelist"><strong>Data Types: </strong><code itemprop="datatype">double</code> | <code itemprop="datatype">single</code><br/>
+<strong>Complex Number Support: </strong>Yes</p></div></div></div></div></div><span id="namevaluepairarguments" class="anchor_target"></span><span id="btw3ipo-1" class="anchor_target"></span><h3 id="namevaluepairs" class="bottom_ruled">Name-Value Pair Arguments</h3><div class="namevaluecontainer"><p class="nvpair_boilerplate">Specify optional
+      comma-separated pairs of <code class="argument">Name,Value</code> arguments. <code class="literal">Name</code> is
+      the argument name and <code class="literal">Value</code> is the corresponding value.
+        <code class="literal">Name</code> must appear inside quotes. You can specify several name and value
+      pair arguments in any order as
+        <code class="literal">Name1,Value1,...,NameN,ValueN</code>.</p><span class="example_desc"><strong>Example: </strong><code class="literal">integral(fun,a,b,'AbsTol',1e-12)</code> sets the absolute error tolerance
+        to approximately 12 decimal places of accuracy.</span></div><div class="ref_sect"><div class="expandableContent"><div class="panel-group" id="d120e634428_panel-group" role="tablist" aria-multiselectable="true"><div class="panel-group" role="tablist" aria-multiselectable="true"><div class="panel panel-default "><div itemscope="" itemprop="inputargument" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/NameValuePairInputArgument" itemid="btbbkta-1-AbsTol"><div role="tab" data-toggle="collapse" id="expand_panel_heading_btbbkta-1-AbsTol" data-target="#expand_panel_body_btbbkta-1-AbsTol" aria-controls="expand_panel_body_btbbkta-1-AbsTol" class="panel-heading add_cursor_pointer" aria-expanded="true"><span id="inputarg_AbsTol" class="anchor_target"></span><h3 class="panel-title" id="btbbkta-1-AbsTol"><code itemprop="name">'AbsTol'</code> &#8212; <span itemprop="purpose">Absolute error tolerance</span><br/> <span class="add_font_color_general remove_bold"><span class="example_desc"><span itemprop="inputvalue defaultvalue"><code class="literal">1e-10</code></span> (default) | <span itemprop="inputvalue">nonnegative real number</span></span></span></h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_btbbkta-1-AbsTol" aria-labelledby="expand_panel_heading_btbbkta-1-AbsTol" class="panel-collapse collapse in"><div class="panel-body">
+<p>Absolute error tolerance, specified as the comma-separated pair consisting of
+                <code class="literal">'AbsTol'</code> and a nonnegative real number.
+                <code class="function">integral</code> uses the absolute error tolerance to limit an estimate
+              of the absolute error, |<em class="varname">q</em> &#8211; <em class="varname">Q</em>|, where
+                <em class="varname">q</em> is the computed value of the integral and <em class="varname">Q</em>
+              is the (unknown) exact value. <code class="function">integral</code> might provide more decimal
+              places of precision if you decrease the absolute error tolerance.</p>
+<div class="alert alert-info"><span class="alert_icon icon-alert-info-reverse"></span><h3>Note</h3><p><code class="literal">AbsTol</code> and <code class="literal">RelTol</code> work
+together. <code class="function">integral</code> might satisfy the absolute
+error tolerance or the relative error tolerance, but not necessarily
+both. For more information on using these tolerances, see the <a href="integral.html#btc_m8o-4" class="intrnllnk">Tips</a> section.</p></div>
+<p class="description_valueexample"><strong>Example: </strong><code class="literal">integral(fun,a,b,'AbsTol',1e-12)</code> sets the absolute error tolerance
+              to approximately 12 decimal places of accuracy.</p>
+<p class="datatypelist"><strong>Data Types: </strong><code itemprop="datatype">single</code> | <code itemprop="datatype">double</code></p></div></div></div></div></div><div class="panel-group" role="tablist" aria-multiselectable="true"><div class="panel panel-default "><div itemscope="" itemprop="inputargument" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/NameValuePairInputArgument" itemid="btbbkta-1-RelTol"><div role="tab" data-toggle="collapse" id="expand_panel_heading_btbbkta-1-RelTol" data-target="#expand_panel_body_btbbkta-1-RelTol" aria-controls="expand_panel_body_btbbkta-1-RelTol" class="panel-heading add_cursor_pointer" aria-expanded="true"><span id="inputarg_RelTol" class="anchor_target"></span><h3 class="panel-title" id="btbbkta-1-RelTol"><code itemprop="name">'RelTol'</code> &#8212; <span itemprop="purpose">Relative error tolerance</span><br/> <span class="add_font_color_general remove_bold"><span class="example_desc"><span itemprop="inputvalue defaultvalue"><code class="literal">1e-6</code></span> (default) | <span itemprop="inputvalue">nonnegative real number</span></span></span></h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_btbbkta-1-RelTol" aria-labelledby="expand_panel_heading_btbbkta-1-RelTol" class="panel-collapse collapse in"><div class="panel-body">
+<p>Relative error tolerance, specified as the comma-separated pair consisting of
+                <code class="literal">'RelTol'</code> and a nonnegative real number.
+                <code class="function">integral</code> uses the relative error tolerance to limit an estimate
+              of the relative error, |<em class="varname">q</em> &#8211;
+                <em class="varname">Q</em>|/|<em class="varname">Q</em>|, where <em class="varname">q</em> is the
+              computed value of the integral and <em class="varname">Q</em> is the (unknown) exact value.
+                <code class="function">integral</code> might provide more significant digits of precision if
+              you decrease the relative error tolerance.</p>
+<div class="alert alert-info"><span class="alert_icon icon-alert-info-reverse"></span><h3>Note</h3><p><code class="literal">RelTol</code> and <code class="literal">AbsTol</code> work
+together. <code class="function">integral</code> might satisfy the relative
+error tolerance or the absolute error tolerance, but not necessarily
+both. For more information on using these tolerances, see the <a href="integral.html#btc_m8o-4" class="intrnllnk">Tips</a> section.</p></div>
+<p class="description_valueexample"><strong>Example: </strong><code class="literal">integral(fun,a,b,'RelTol',1e-9)</code> sets the relative error tolerance
+              to approximately 9 significant digits.</p>
+<p class="datatypelist"><strong>Data Types: </strong><code itemprop="datatype">single</code> | <code itemprop="datatype">double</code></p></div></div></div></div></div><div class="panel-group" role="tablist" aria-multiselectable="true"><div class="panel panel-default "><div itemscope="" itemprop="inputargument" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/NameValuePairInputArgument" itemid="btbbkta-1-ArrayValued"><div role="tab" data-toggle="collapse" id="expand_panel_heading_btbbkta-1-ArrayValued" data-target="#expand_panel_body_btbbkta-1-ArrayValued" aria-controls="expand_panel_body_btbbkta-1-ArrayValued" class="panel-heading add_cursor_pointer" aria-expanded="true"><span id="inputarg_ArrayValued" class="anchor_target"></span><h3 class="panel-title" id="btbbkta-1-ArrayValued"><code itemprop="name">'ArrayValued'</code> &#8212; <span itemprop="purpose">Array-valued function flag</span><br/> <span class="add_font_color_general remove_bold"><span class="example_desc"><span itemprop="inputvalue defaultvalue"><code class="literal">false</code> or <code class="literal">0</code></span> (default) | <span itemprop="inputvalue"><code class="literal">true</code> or <code class="literal">1</code></span></span></span></h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_btbbkta-1-ArrayValued" aria-labelledby="expand_panel_heading_btbbkta-1-ArrayValued" class="panel-collapse collapse in"><div class="panel-body">
+<p>Array-valued function flag, specified as the comma-separated pair consisting of
+                <code class="literal">'ArrayValued'</code> and a numeric or logical <code class="literal">1</code>
+                (<code class="literal">true</code>) or <code class="literal">0</code> (<code class="literal">false</code>). Set
+              this flag to <code class="literal">true</code> or <code class="literal">1</code> to indicate that
+                <code class="literal">fun</code> is a function that accepts a scalar input and returns a
+              vector, matrix, or N-D array output.</p>
+<p>The default value of <code class="literal">false</code> indicates that <code class="literal">fun</code> is a
+              function that accepts a vector input and returns a vector output.</p>
+<p class="description_valueexample"><strong>Example: </strong>
+              <code class="literal">integral(fun,a,b,'ArrayValued',true)</code> indicates that the integrand
+              is an array-valued function.</p></div></div></div></div></div><div class="panel-group" role="tablist" aria-multiselectable="true"><div class="panel panel-default "><div itemscope="" itemprop="inputargument" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/NameValuePairInputArgument" itemid="btbbkta-1-Waypoints"><div role="tab" data-toggle="collapse" id="expand_panel_heading_btbbkta-1-Waypoints" data-target="#expand_panel_body_btbbkta-1-Waypoints" aria-controls="expand_panel_body_btbbkta-1-Waypoints" class="panel-heading add_cursor_pointer" aria-expanded="true"><span id="inputarg_Waypoints" class="anchor_target"></span><h3 class="panel-title" id="btbbkta-1-Waypoints"><code itemprop="name">'Waypoints'</code> &#8212; <span itemprop="purpose">Integration waypoints</span><br/> <span class="add_font_color_general remove_bold"><span class="example_desc"><span itemprop="inputvalue">vector</span></span></span></h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_btbbkta-1-Waypoints" aria-labelledby="expand_panel_heading_btbbkta-1-Waypoints" class="panel-collapse collapse in"><div class="panel-body">
+<p>Integration waypoints, specified as the comma-separated pair consisting of
+                <code class="literal">'Waypoints'</code> and a vector of real or complex numbers. Use
+              waypoints to indicate points in the integration interval that you would like the
+              integrator to use in the initial mesh: </p>
+<div class="itemizedlist"><ul><li><p>Add more evaluation points near interesting features of the function, such
+                    as a local extrema.</p></li><li><p>Integrate efficiently across discontinuities of the integrand by specifying
+                    the locations of the discontinuities.</p></li><li><p>Perform complex contour integrations by specifying complex numbers as
+                    waypoints. If <code class="literal">xmin</code>, <code class="literal">xmax</code>, or any entry of
+                    the waypoints vector is complex, then the integration is performed over a
+                    sequence of straight line paths in the complex plane. In this case, all of the
+                    integration limits and waypoints must be finite.</p></li></ul></div><p>
+</p>
+            <p>Do not use waypoints to specify singularities. Instead, split the interval and add
+              the results of separate integrations with the singularities at the endpoints.</p>
+<p class="description_valueexample"><strong>Example: </strong>
+              <code class="literal">integral(fun,a,b,'Waypoints',[1+1i,1-1i])</code> specifies two complex
+              waypoints along the interval of integration.</p>
+<p class="datatypelist"><strong>Data Types: </strong><code itemprop="datatype">single</code> | <code itemprop="datatype">double</code><br/>
+<strong>Complex Number Support: </strong>Yes</p></div></div></div></div></div></div></div></div></div></div></div><div class="ref_sect"><h2 id="btc_m8o-4">Tips</h2><div class="itemizedlist"><ul><li><p>The <code class="function">integral</code> function attempts to satisfy:
+          <div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>abs(q - Q) &lt;= max(AbsTol,RelTol*abs(q))</pre></div></div></div>where
+            <code class="literal">q</code> is the computed value of the integral and <code class="literal">Q</code> is
+          the (unknown) exact value. The absolute and relative tolerances provide a way of trading
+          off accuracy and computation time. Usually, the relative tolerance determines the accuracy
+          of the integration. However if <code class="literal">abs(q)</code> is sufficiently small, the
+          absolute tolerance determines the accuracy of the integration. You should generally
+          specify both absolute and relative tolerances together. </p></li><li><p>If you are specifying single-precision limits of integration, or if
+            <code class="literal">fun</code> returns single-precision results, you might need to specify
+          larger absolute and relative error tolerances.</p></li></ul></div></div><div class="bibliography"><h2 id="References">References</h2><div id="buxe17_-1" class="bibliomixed"><p>[1] L.F. Shampine “<em class="citetitle">Vectorized
+Adaptive Quadrature in MATLAB<sup>&#x00AE;</sup></em>,” <em class="citetitle">Journal
+of Computational and Applied Mathematics</em>, 211, 2008, pp.131&#8211;140.</p></div></div><div class="ref_sect"><h2 id="btbbkta-1_seealso">See Also</h2><p><span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/SeeAlso" itemprop="seealso"><a itemprop="url" href="integral2.html"><span itemprop="name"><code class="function">integral2</code></span></a></span> | <span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/SeeAlso" itemprop="seealso"><a itemprop="url" href="integral3.html"><span itemprop="name"><code class="function">integral3</code></span></a></span> | <span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/SeeAlso" itemprop="seealso"><a itemprop="url" href="trapz.html"><span itemprop="name"><code class="function">trapz</code></span></a></span></p><div class="examples_container"><h3 class="remove_border">Topics</h3><div itemprop="content"><ul class="list-unstyled"><li><a href="../math/integration-of-numeric-data.html" class="a">Integration of Numeric Data</a></li><li><a href="../math/integration-to-find-arc-length.html" class="a">Integration to Find Arc Length</a></li><li><a href="../math/complex-line-integrals.html" class="a">Complex Line Integrals</a></li><li><a href="../matlab_prog/creating-a-function-handle.html" class="a">Create Function Handle</a></li><li><a href="../math/parameterizing-functions.html" class="a">Parameterizing Functions</a></li></ul></div></div></div><div class="release_introduced"><h4>Introduced in R2012a</h4></div>
+    </div></div>
+<div class="modal fade" id="open-example-dialog" tabindex="-1" role="dialog" aria-labelledby="openExampleDialogLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title">Open Example</h4></div><div class="modal-body" id="dialog-body"><p>You have a modified version of this example. Do you want to open this example with your edits?</p></div><div class="modal-footer"><a id="open-example-dialog-replace" class="btn btn_color_blue companion_btn" data-dismiss="modal">No, open this example and discard my edits</a><a id="open-example-dialog-continue" class="btn btn_color_blue" data-dismiss="modal">Yes</a></div></div></div></div>
+<div class="clearfix"></div>
+<div align="center" class="feedbackblock"><iframe id="doc_survey"></iframe></div><script src="../../includes/shared/scripts/docsurvey.js"></script>
+
+<script>initDocSurvey();</script></section>
+
+
+</div>
+</div>
+</div>
+</div><!--close_0960-->
+<div xmlns="http://www.w3.org/1999/xhtml" class="body_trail_container">
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12">
+<div class="row"><div class="col-xs-12 col-sm-4"><h5><a href="../index.html?s_cid=doc_ftr">MATLAB Documentation</a></h5>
+<ul class="list-unstyled hidden-xs"><li><a href="../examples.html?s_cid=doc_ftr">Examples</a></li>
+<li><a href="../referencelist.html?type=function&amp;s_cid=doc_ftr">Functions</a></li>
+<li><a href="../release-notes.html?s_cid=doc_ftr">Release Notes</a></li>
+<li><a href="https://www.mathworks.com/help/releases/R2020a/pdf_doc/matlab/index.html?s_cid=doc_ftr">PDF Documentation</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-4"><h5><a href="https://www.mathworks.com/support.html?s_cid=doc_ftr">Support</a></h5>
+<ul class="list-unstyled hidden-xs"><li><a href="https://www.mathworks.com/matlabcentral/answers/index?s_cid=doc_ftr">MATLAB Answers</a></li><li><a href="https://www.mathworks.com/support/install-matlab.html?s_cid=doc_ftr">Installation Help</a></li><li><a href="https://www.mathworks.com/support/bugreports/?s_cid=doc_ftr">Bug Reports</a></li><li><a href="https://www.mathworks.com/support/requirements/product-requirements-platform-availability-list.html?s_cid=doc_ftr">Product Requirements</a></li><li><a href="https://www.mathworks.com/downloads/?s_cid=doc_ftr">Software Downloads</a></li></ul>
+</div>
+</div>
+</div>
+</div>
+</div><!--END.CLASS container-fluid-->
+</div><!--END.CLASS body_trail_container-->
+<footer xmlns="http://www.w3.org/1999/xhtml" id="footer" class="bs-footer">
+<div class="container-fluid">
+<div class="footer">
+<div class="row">
+<div class="col-xs-12">
+<p class="copyright">© 1994-2020 The MathWorks, Inc.</p>
+<ul class="footernav"><li class="footernav_help"><a href="MATLAB:web(matlab.internal.licenseAgreement)">Terms of Use</a></li><li class="footernav_patents"><a href="MATLAB:web([matlabroot '/patents.txt'])">Patents</a></li><li class="footernav_trademarks"><a href="MATLAB:web([matlabroot '/trademarks.txt'])">Trademarks</a></li><li class="footernav_piracy"><a href="MATLAB:web([docroot '/acknowledgments.html'])">Acknowledgments</a></li></ul></div>
+</div>
+</div>
+</div>
+</footer>
+</div><!--close row-offcanvas-->
+</div><!--close_0970-->
+</body>
+</html>
