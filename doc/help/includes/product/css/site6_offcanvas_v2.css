@@ -1,0 +1,333 @@
+/*
+-----------------------------------
+TOC
+-----------------------------------
+
+Bootstrap Overrides:......Changes to base-Bootstrap CSS
+
+Globals:..................Styling of HTML and BODY
+
+Site Elements:............Re-usable site elements 	
+
+Structure:................Site structural components
+
+Section Specific:.........Styles for Home and all Sub Pages
+
+Page/Element Specific:....Page, element or flow Specific CSS
+
+Responsive:...............Specific styles for Desktop, Tablet and Mobile
+
+Additive CSS:.............Additive/override CSS
+
+Browser Hacks:............Functionality Fixes for Older Browsers
+
+*/
+
+
+
+/* ---- Globals ---- */
+html { margin-bottom:0; }
+html body { overflow-x:hidden; position:relative; }
+
+/* From Responselib, incorporated below
+.sticky_header_container.affix { top:52px; }    
+.section_header { position:-webkit-sticky; position:sticky; top:0; z-index:6; }
+*/
+
+.section_header { position:-webkit-sticky; position:sticky; top:0; /*z-index:6;*/ z-index:1036; }
+
+.sticky_header_container { border-bottom:1px solid #d4d4d4; border-left:1px solid #d4d4d4; position:sticky; position:-webkit-sticky; top:52px; z-index:5; }
+.sticky_header_container.peek { box-shadow:2px 2px 2px 0 rgba(0, 0, 0, 0.25);  }
+
+  /* Affix Overrides */
+  .sticky_header_container.affix,
+  .sticky_header_container.affix-bottom { box-shadow:2px 2px 2px 0 rgba(0, 0, 0, 0.25); top:52px;  }
+
+.horizontal_nav_container .navbar-nav { padding-top:7px; padding-left:0; margin-left:0; line-height:1.00; }
+.horizontal_nav_container .navbar-nav > li { padding:0; }
+.horizontal_nav_container .navbar-nav > li > a { padding:10px 10px 8px; line-height:1.00; text-align:center; }
+.horizontal_nav_container .navbar-nav > li > a > .result_count { font-size:11px; }
+.horizontal_nav_container .crux_search li > a { padding:3px 10px 2px; }
+.horizontal_nav_container .crux_search li > a.no_results { color:#1a1a1a; pointer-events:none; cursor:default; opacity:.5; }
+
+.horizontal_nav_container .navbar-nav > li.supplemental_crux_resource { border-left:1px solid #e6e6e6; }
+.horizontal_nav_container .navbar-nav > li.supplemental_crux_resource + li { border-left:none; }
+
+.horizontal_nav_container .navbar-nav > li > a,
+.horizontal_nav_container .navbar-nav > li > a:visited { color:#0076a8; }
+.horizontal_nav_container .navbar-nav > li > a:hover { color:#004b87; }
+
+.horizontal_nav_container .navbar-nav > li.active > a,
+.horizontal_nav_container .navbar-nav > li.active > a:hover { border-radius:4px; background:#e6f2fa; color:#1a1a1a; }
+
+.horizontal_nav_container .navbar-nav > li + li { padding-left:1px; border-left:none; }
+
+/* new START*/
+/* @media only screen and (min-width:768px) { */
+@media only screen and (min-width:320px) {
+
+  #responsive_offcanvas .sticky_header_container { margin-left:46px; transition:margin-left .5s ease-in; }
+  #responsive_offcanvas .sticky_header_container { margin-left:35px; }
+  #responsive_offcanvas.offcanvas_active .sticky_header_container { margin-left:269px; }
+
+
+  #responsive_offcanvas.no_animate .offcanvas_actuator,
+  #responsive_offcanvas.no_animate .sticky_header_container,
+  #responsive_offcanvas.no_animate .offcanvas_content_container { transition:none; }
+
+  .offcanvas_actuator { /*box-shadow:0 2px 2px 0 rgba(0, 0, 0, 0.25);*/ font-size:14px; }
+  .sidebar-offcanvas { margin-top:-44px; }
+
+  #responsive_offcanvas.locked .sidebar-offcanvas { margin-top:0; }
+
+  .has_horizontal_local_nav#section_header_title:after { content: none; }
+
+}
+@media only screen and (min-width:992px) and (max-width:1199px)  {
+
+  #responsive_offcanvas.offcanvas_active .horizontal_nav_container .navbar-nav > li > a { padding:10px 8px 8px; }
+  #responsive_offcanvas.offcanvas_active .horizontal_nav_container .navbar-nav.crux_search > li > a { padding:3px 8px 2px; }
+
+  /* AEM Fix */
+  #responsive_offcanvas .horizontal_nav_container .navbar-nav.crux_resource_list > li > a,
+  #responsive_offcanvas .horizontal_nav_container .navbar-nav.supplemental_crux_resource_list > li > a { padding:3px 8px 2px; } 
+
+}
+/* @media only screen and (min-width:768px) and (max-width:991px)  { */
+@media only screen and (min-width:320px) and (max-width:991px)  {   
+
+
+  #responsive_offcanvas.offcanvas_active .sticky_header_container { margin-left:46px; }
+  #responsive_offcanvas.offcanvas_active .sticky_header_container { margin-left:35px; }
+  .offcanvas_actuator { /*width:45px !important;*/ transition:none; overflow:hidden; }
+
+  .horizontal_nav_container .navbar-nav > li > a { padding:10px 8px 8px; }
+  .horizontal_nav_container .navbar-nav.crux_search > li > a { padding:3px 8px 2px; }
+
+
+  /* AEM Fix */
+  #responsive_offcanvas .horizontal_nav_container .navbar-nav.crux_resource_list,
+  #responsive_offcanvas .horizontal_nav_container .navbar-nav.supplemental_crux_resource_list { margin:0; }
+
+  #responsive_offcanvas .horizontal_nav_container .navbar-nav.crux_resource_list > li > a,
+  #responsive_offcanvas .horizontal_nav_container .navbar-nav.supplemental_crux_resource_list > li > a { padding:3px 8px 2px; }   
+
+}
+
+
+@media only screen and (max-width:767px) {
+
+.mobile_crux_nav_trigger { margin-left:-15px; }
+.mobile_crux_nav_trigger .btn { height:45px; border:none; border-radius:0; background:transparent !important; box-shadow:none !important; }
+.mobile_crux_nav_trigger .dropdown-menu { width:200px; }
+.mobile_crux_nav_trigger .dropdown-menu li { padding:0; margin-bottom:0; font-size:12px;  }
+.mobile_crux_nav_trigger .dropdown-menu li > a { color:#333; padding:4px 10px; display:block; }
+.mobile_crux_nav_trigger .dropdown-menu li > a > .result_count { margin:0 0 5px 7px; display: block; float: right; }
+.mobile_crux_nav_trigger .dropdown-menu li > a:hover { background-color:#f5f5f5; text-decoration: none; }
+
+.mobile_crux_nav_trigger .dropdown-menu li ul { padding:0; }
+.mobile_crux_nav_trigger .dropdown-menu li li { padding-left:7px; }
+
+.mobile_crux_nav_trigger .dropdown-menu li.active > a { background:#e6f2fa; color:#333; }
+
+.mobile_crux_nav_trigger .dropdown-menu li.crux_resource + li.crux_resource > a { padding-left:20px; }
+
+}
+
+
+
+/* new END */
+
+#footer { position:relative; z-index:4; }
+
+
+
+/* ---- Off-Canvas Template ---- */
+.row-offcanvas { background:#fff; position:relative; }
+
+.sidebar-offcanvas { width:269px; padding:0; background-color:#fafafa; float:left; /*overflow-y:hidden; Need to move actuator */ }
+  
+.offcanvas_content_container { margin-left:45px; border-left:1px solid #d4d4d4; position:relative; transition:width .5s ease-in, margin-left .5s ease-in; /* z-index:4; */ }
+/* NEW: START */
+.offcanvas_content_container { margin-left:35px; }
+/* NEW: END */
+
+.content_container { min-height:100vh; }
+
+  /* Off-Canvas Template: Active */
+  .row-offcanvas.active .offcanvas_content_container { margin-left:269px; }
+  
+
+
+/* ---- Off-Canvas Nav ---- */
+.nav_list_wrapper { width:100%; /*padding-top:10px;*/ position:absolute; top:44px; right:0; bottom:0; left:0; overflow-y:auto; opacity:0; transition:opacity .25s ease }
+.nav_list_wrapper * { pointer-events: none; }
+
+/* New 2019-02-07 */
+.offcanvas_nav { font-size:12px; }
+/* New 2019-02-07 */
+
+
+  /* Off-Canvas Nav: Active */
+  .row-offcanvas.active .nav_list_wrapper { opacity:1.0; }
+  .row-offcanvas.active .nav_list_wrapper * { pointer-events: auto; }
+
+
+
+/* ---- Off-Canvas Actuator  ---- */
+
+  /* Actuator Container: Inactive */   
+  .offcanvas_actuator { width:100%; height:44px; color:#428bca; cursor:pointer; display:block; position:absolute; top:0; left:0; vertical-align:top; transition: all .5s ease-in; /*z-index:3; Removing bc of issue with Edge*/ }
+
+/* NEW: START */
+.offcanvas_actuator { padding-top:6px; overflow:hidden; white-space: nowrap; }
+/* NEW: END */
+
+
+  /* Actuator Container: Active */ 
+  .offcanvas_actuator.active { transition: all .5s ease-in; }
+  
+
+  /* Actuator Container: Mobile */ 
+  .mobile_offcanvas_actuator { display: none; }
+
+
+  /* Off-Canvas Actuator: Button */
+
+    /* Actuator Button: Inactive */  
+    .offcanvas_actuator .btn { padding: 4px; margin-right: 3px; margin-left: 2px; background-color: transparent; float: left; }
+
+/* NEW: START */
+.offcanvas_actuator .btn { padding:0; margin:0 0 0 1px; margin-right:2px; }
+/* NEW: END */
+
+    .offcanvas_actuator .btn,
+    .offcanvas_actuator .btn:active { box-shadow: none; /* outline: none; */ }
+
+    .offcanvas_actuator .btn:hover,
+    .offcanvas_actuator .btn:focus,
+    .offcanvas_actuator .btn:active { color: #428bca; }
+
+    /* Actuator Button: Active */
+    .offcanvas_actuator.active .btn:hover,
+    .offcanvas_actuator.active .btn:focus,
+    .offcanvas_actuator.active .btn:active { /* color: #9e9e9e; */ color: #428bca; } 
+
+    /* Actuator Button: Icon */
+    .offcanvas_actuator .btn .icon-menu { margin-top:0; color:#9e9e9e; font-size: 33px; line-height: 1.00; }
+    
+/* NEW: START */
+    /*
+    .offcanvas_actuator .btn .icon-arrow-open-right { color:#9e9e9e; font-size: 24px; line-height: 1.00; }
+    .offcanvas_active .offcanvas_actuator .btn .icon-arrow-open-right:before { content: "\e613" !important; }
+    */
+/* NEW: END */
+
+
+  /* Off-Canvas Actuator: Labels */
+
+    /* Actuator Labels: Inctive */  
+    .offcanvas_actuator .offcanvas_actuator_label { margin-top: 6px; color:#9e9e9e; display: block; float: left; opacity:0; transition: opacity .25s ease; }
+    .offcanvas_actuator .offcanvas_actuator_label:before { content: "CONTENTS"; }
+    .offcanvas_actuator .offcanvas_actuator_label:focus { padding: 4px; margin-top:2px; margin-left: -4px; border-radius: 4px;  background: #e5e5e5; /* outline: none; */ }
+    
+    .offcanvas_actuator .offcanvas_actuator_close:before { content: "Close"; }
+    .offcanvas_actuator .offcanvas_actuator_close { margin: 12px 15px 0 0; color: #0076a8; display: block; float: right; opacity: 1; transition: all .25s ease-in; }
+    .offcanvas_actuator .offcanvas_actuator_close:hover { color: #004b87; }
+    .offcanvas_actuator .offcanvas_actuator_close:focus { padding: 4px; margin-top: 8px; margin-right: 11px; border-radius: 4px; background: #e5e5e5; /* outline: none; */ }
+
+
+    /* Actuator Labels: Active */
+    .row-offcanvas.active .offcanvas_actuator .offcanvas_actuator_label { opacity:1.0;  }
+    
+    .offcanvas_actuator.active .offcanvas_actuator_close { opacity: 1; transition: all .25s ease-in; }      
+
+
+
+
+/* ---- Mobile ---- */
+@media only screen and (max-width:767px) {
+
+
+
+}
+
+
+.offcanvas_content_container .sticky_header_container { margin-left:0 !important; border-left:none; top:52px !important; }
+.sidebar-offcanvas { margin-top:0 !important; }
+.sticky_header_container.affix + .content_container { padding-top:20px !important; }
+
+
+/* ---- CRUX Search Clear Affordance ---- */
+.crux_search li.active > a:hover:before { content:"\e64b" !important; font-family:'mathworks'; font-size:80%; font-style:normal; font-variant:normal; font-weight:normal; opacity:0.90; position:absolute; top:1px; right:1px; speak:none; text-decoration:none !important; text-transform:none; }
+
+
+
+/* --- AEM Requried ---- */
+/* Global */
+.offcanvas_nav { padding: 7px 24px 20px 20px !important; color: #666; }
+.offcanvas_nav a { color: #666; }
+
+/* Nav Breadcrumb */
+.sidebar-offcanvas ul.nav_breadcrumb { padding-bottom: 7px; margin-bottom: 7px; border-bottom:1px solid #e6e6e6; }
+.sidebar-offcanvas ul.nav_breadcrumb > li { padding-left: 0; margin-bottom: 0; font-size: 11px; }
+.sidebar-offcanvas ul.nav_breadcrumb > li > a { padding: 3px 0; display: block; }
+.sidebar-offcanvas ul.nav_breadcrumb > li > a:before { padding-right: 3px; content: "\00ab"!important; display: inline-block; font-size: 14px; line-height: 1.00; font-style: normal; }
+
+/* Offcanvas: Text Decoration Fix for :before in IE 8-11 */
+/* http://stackoverflow.com/a/21902566 */
+.sidebar-offcanvas ul.nav_breadcrumb > li > a:before,
+.sidebar-offcanvas ul.nav_breadcrumb > li > a:hover:before { text-decoration: none; }
+
+/* Browsing Categories */
+.sidebar-offcanvas .crux_browse .refinable_heading { padding:4px 5px 3px 0; color:#000; font-weight:bold; }
+.sidebar-offcanvas .crux_browse .refinable_heading ~ li:not(.refinable_heading) { margin-left:15px; }
+
+
+/* Fix for Locked Header w/o Content Container Padding */
+/* #responsive_offcanvas .sticky_header_container.affix ~ .row-offcanvas .content_container { padding-top: 96px; } */
+/* #responsive_offcanvas .sticky_header_container.messagebar_active.affix ~ .row-offcanvas .offcanvas_nav { padding-top: 26px; } */
+
+/* .offcanvas_nav h3, .search_refine h3 { font: normal bold 15px/1.333 Arial,Helvetica,sans-serif; */
+
+/* Headings for Browsing */
+[id*="crux_browse_"] h1 { padding:0 61px 2px 0; margin-bottom: 16px; border-bottom: 1px solid #cbcbcb; background-position: right bottom; background-repeat: no-repeat; background-size: 58px; color: #c45400; font: normal normal 22px/1.136 Arial,Helvetica,sans-serif; }
+[id*="crux_browse_"] h2 { padding-top: 5px; margin-bottom: 8px; color: #404040; font: normal bold 17px/1.35 Arial, Helvetica, sans-serif; }
+[id*="crux_browse_"] h3 { padding-top: 5px; padding-bottom: 2px; margin-bottom:0; color: #c45400; font: normal bold 15px/1.333 Arial,Helvetica,sans-serif; }
+[id*="crux_browse_"] h4 { padding-top: 5px; margin-bottom: 5px; color: #3c3c3c; font: normal bold 13px/1.385 Arial,Helvetica,sans-serif; }
+[id*="crux_browse_"] h5 { margin-bottom: 0; color: #3c3c3c; font: normal normal 13px/1.385 Arial,Helvetica,sans-serif; }
+[id*="crux_browse_"] h6 { margin-bottom: 8px; font: italic normal 13px/1.385 Arial,Helvetica,sans-serif; }
+
+[id*="crux_browse_"] h2 + h3 { margin-top: 0; color: #c45400; }
+
+[id*="crux_browse_"] .card_body h3 { color:inherit; }
+
+
+
+
+
+/* CRUX Search Nav Truncation */
+  .crux_search { min-height:45px;  }
+  .supplemental_crux_resource_list .dropdown { width:65px; }
+  #truncate_list { padding-top:7px; margin-bottom:0; float:left; line-height:1.00; }
+  #truncate_list li { font-size:13px; line-height:1.00; }
+  #truncate_list > li > a { height:31px; padding:10px 10px 0; display:block; }
+  #truncate_list  a.dropdown-toggle:hover { text-decoration:none; }
+  #truncate_list .dropdown-menu { width:150px; margin-left:-100px; }
+  #truncate_list > li > a.active { border-radius: 4px; background: #e6f2fa; color: #1a1a1a; }
+
+@media only screen and (min-width:320px) and (max-width:1199px)  {
+  /* AEM Fix */
+
+  #responsive_offcanvas.offcanvas_active .horizontal_nav_container .navbar-nav.supplemental_crux_resource_list +  #truncate_list > li > a { padding:10px 6px ; } 
+
+
+  /* AEM Fix */
+  #responsive_offcanvas .horizontal_nav_container .navbar-nav.crux_resource_list,
+  #responsive_offcanvas .horizontal_nav_container .navbar-nav.supplemental_crux_resource_list { margin:0; }
+
+  #responsive_offcanvas .horizontal_nav_container .navbar-nav.crux_resource_list > li > a,
+  #responsive_offcanvas .horizontal_nav_container .navbar-nav.supplemental_crux_resource_list > li > a { padding:3px 6px 2px; }   
+
+
+}
